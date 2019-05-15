@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://level01.gd" type="Script" id=1]
+[ext_resource path="res://assets/level01/background/background.png" type="Texture" id=2]
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=3]
+[ext_resource path="res://Turtle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Key.gd" type="Script" id=6]
+[ext_resource path="res://assets/keyRed.png" type="Texture" id=7]
+[ext_resource path="res://Porta.gd" type="Script" id=8]
+[ext_resource path="res://assets/doorRed_lock.png" type="Texture" id=9]
+[ext_resource path="res://assets/font.tres" type="DynamicFont" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 22.7258
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 34, 26 )
+
+[node name="level01" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -1.16638
+margin_top = -1.16632
+margin_right = 1022.83
+margin_bottom = 598.834
+texture = ExtResource( 2 )
+
+[node name="Items" type="TileMap" parent="."]
+position = Vector2( 0, 23 )
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( -65536, 5, 0, -65535, 5, 0, -65534, 5, 0, -65533, 5, 0, -65532, 5, 0, -65531, 5, 0, -65530, 5, 0, -65529, 5, 0, -65528, 5, 0, -65527, 5, 0, -65526, 5, 0, -65525, 5, 0, -65524, 5, 0, -65523, 5, 0, -65522, 5, 0, -65521, 5, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 15, 5, 0, 65536, 5, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65546, 1, 0, 65548, 1, 0, 65549, 1, 0, 65551, 5, 0, 131072, 5, 0, 131075, 1, 0, 131082, 1, 0, 131084, 1, 0, 131085, 1, 0, 131087, 5, 0, 196608, 5, 0, 196611, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196623, 5, 0, 262144, 5, 0, 262147, 1, 0, 262156, 1, 0, 262159, 5, 0, 327680, 5, 0, 327687, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327695, 5, 0, 393216, 5, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393226, 1, 0, 393231, 5, 0, 458752, 5, 0, 458762, 1, 0, 458764, 1, 0, 458765, 1, 0, 524288, 5, 0, 524289, 5, 0, 524290, 5, 0, 524291, 5, 0, 524292, 5, 0, 524293, 5, 0, 524294, 5, 0, 524295, 5, 0, 524296, 5, 0, 524297, 5, 0, 524298, 5, 0, 524299, 5, 0, 524300, 5, 0, 524301, 5, 0, 524302, 5, 0, 524303, 5, 0 )
+
+[node name="Turtle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 99.1398, 505.03 )
+
+[node name="Turtle2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 348.739, 368.567 )
+
+[node name="Turtle3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 601.837, 134.13 )
+
+[node name="Turtle4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 923.75, 142.295 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 29.1588, 54.8185 )
+
+[node name="Key" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 476, 313 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key"]
+position = Vector2( 2.73553, 2.76901 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Key"]
+position = Vector2( 6.10303, 1.88181 )
+scale = Vector2( 1.07604, 1.0245 )
+texture = ExtResource( 7 )
+
+[node name="Porta" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 928, 498 )
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Porta"]
+position = Vector2( 1, 6 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Porta"]
+position = Vector2( 1, 0 )
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 257.0
+margin_top = 200.0
+margin_right = 728.0
+margin_bottom = 339.0
+custom_fonts/font = ExtResource( 10 )
+text = "FIM DE JOGO! "
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 121.0
+margin_right = 782.0
+margin_bottom = 210.0
+custom_fonts/font = ExtResource( 10 )
+text = "MORREU!"
