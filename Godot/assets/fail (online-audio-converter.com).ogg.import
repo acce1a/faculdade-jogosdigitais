@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fail (online-audio-converter.com).ogg-d2eaa3032cc5e4f4facd6505b2431528.oggstr"
+
+[deps]
+
+source_file="res://assets/fail (online-audio-converter.com).ogg"
+dest_files=[ "res://.import/fail (online-audio-converter.com).ogg-d2eaa3032cc5e4f4facd6505b2431528.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

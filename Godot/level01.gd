@@ -2,6 +2,7 @@ extends Node2D
 
 
 var screensize
+var is_game_ended
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -12,6 +13,7 @@ func _ready():
 	set_camera_limits()
 	$Label.hide()
 	$Label2.hide()
+	$Endgame.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

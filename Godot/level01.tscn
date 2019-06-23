@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://level01.gd" type="Script" id=1]
 [ext_resource path="res://assets/level01/background/background.png" type="Texture" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://Porta.gd" type="Script" id=8]
 [ext_resource path="res://assets/doorRed_lock.png" type="Texture" id=9]
 [ext_resource path="res://assets/font.tres" type="DynamicFont" id=10]
+[ext_resource path="res://assets/Ominosity (online-audio-converter.com).ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/key (online-audio-converter.com).ogg" type="AudioStream" id=12]
+[ext_resource path="res://assets/fail (online-audio-converter.com).ogg" type="AudioStream" id=13]
+[ext_resource path="res://assets/success (online-audio-converter.com).ogg" type="AudioStream" id=14]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 22.7258
@@ -90,3 +94,26 @@ margin_right = 782.0
 margin_bottom = 210.0
 custom_fonts/font = ExtResource( 10 )
 text = "MORREU!"
+
+[node name="Endgame" type="Label" parent="."]
+margin_left = 101.67
+margin_top = 274.939
+margin_right = 1259.67
+margin_bottom = 363.939
+custom_fonts/font = ExtResource( 10 )
+text = "Aperte espaço p/ reiniciar!!"
+
+[node name="ambient" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
+
+[node name="key_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+area_mask = 513
+
+[node name="death_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+pitch_scale = 1.33
+
+[node name="end_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )

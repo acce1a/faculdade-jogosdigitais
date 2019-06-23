@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ominosity (online-audio-converter.com).ogg-c1ccb568d72325f2bd30cb7320eec59e.oggstr"
+
+[deps]
+
+source_file="res://assets/Ominosity (online-audio-converter.com).ogg"
+dest_files=[ "res://.import/Ominosity (online-audio-converter.com).ogg-c1ccb568d72325f2bd30cb7320eec59e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
